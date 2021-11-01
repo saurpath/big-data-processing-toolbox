@@ -21,7 +21,14 @@ kubectl apply -f sonarscanner-deployment.yaml
 kubectl apply -f sonarscanner-service.yaml
 kubectl apply -f sonarscanner-lb.yaml
 
-# Spark
-kubectl apply -f sonarscanner-deployment.yaml
-kubectl apply -f sonarscanner-service.yaml
-kubectl apply -f sonarscanner-lb.yaml
+# Spark Master
+kubectl apply -f spark-master-deployment.yaml
+kubectl apply -f spark-master-service.yaml
+kubectl apply -f spark-master-ingress.yaml
+
+sleep 10
+
+# Spark workers
+kubectl apply -f spark-worker1-deployment.yaml
+kubectl apply -f spark-worker2-deployment.yaml
+
