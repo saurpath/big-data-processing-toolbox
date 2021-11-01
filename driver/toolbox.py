@@ -41,7 +41,10 @@ def main() -> None:
         try:
             handle_input(int(input(PROMPT)))
         except Exception as e:
-            print("Invalid Input. Please try again.")
+            if e==EOFError:
+                pass
+            else:
+                print("Invalid Input. Please try again.") 
 
 if __name__ == "__main__":
     main()
