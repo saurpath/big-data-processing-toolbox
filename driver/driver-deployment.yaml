@@ -27,6 +27,8 @@ spec:
     spec:
       containers:
       - image: saurpath/driver
+        ports:
+          - containerPort: 8888
         imagePullPolicy: Always
         name: driver
         resources: {}

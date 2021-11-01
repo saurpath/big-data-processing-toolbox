@@ -1,5 +1,4 @@
 import os
-from typing import Protocol
 
 BANNER = """
 Welcome to Big Data Processing Application
