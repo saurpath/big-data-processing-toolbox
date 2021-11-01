@@ -32,3 +32,6 @@ sleep 10
 kubectl apply -f spark/spark-worker1-deployment.yaml
 kubectl apply -f spark/spark-worker2-deployment.yaml
 
+#Driver
+kubectl apply -f driver/driver-deployment.yaml
+
