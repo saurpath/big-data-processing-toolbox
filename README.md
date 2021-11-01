@@ -104,14 +104,26 @@ docker push $DOCKER_USER_ID/driver
    ```
 
 ### 4. Interact using the driver application.
-1. Pull the driver docker image.
+1. Get the pod ID for the driver.
   ```ruby
-  docker pull saurpath/driver
+    saurpath95@cloudshell:~/big-data-processing-toolbox (test-330723)$ kubectl get pods
+    NAME                                READY   STATUS    RESTARTS   AGE
+    datanode1-549b879ff6-h5ddv          1/1     Running   0          85m
+    datanode2-7f646fc575-hxgcr          1/1     Running   0          85m
+    driver-6b89d77458-jv8mc             1/1     Running   0          13s
+    jupyter-notebook-78987c94c7-zgxfp   1/1     Running   0          85m
+    namenode-7db54bb467-66dn9           1/1     Running   0          85m
+    sonar-scanner-d6f477d89-7svqs       1/1     Running   0          85m
+    spark-master-7f6569fbf5-psnzf       1/1     Running   0          85m
+    spark-worker1-5bb68bd769-nb7dv      1/1     Running   7          85m
+    spark-worker1-5bb68bd769-nhvw2      1/1     Running   8          85m
+    spark-worker2-b9bb944c-4cwlw        1/1     Running   7          85m
+    spark-worker2-b9bb944c-w2ntx        1/1     Running   7          85m
   ```
 2. Run the file in interactive mode.
    Note: The driver currently only acts as a landing page. Links to each micro-service will be updated soon.
   ```ruby
-  saurpath95@cloudshell:~/big-data-processing-toolbox (test-330723)$ docker run -it saurpath/driver
+  saurpath95@cloudshell:~/big-data-processing-toolbox (test-330723)$ kubectl attach driver-6b89d77458-jv8mc -it
 
   Welcome to Big Data Processing Application
 
