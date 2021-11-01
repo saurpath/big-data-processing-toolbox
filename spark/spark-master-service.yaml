@@ -21,4 +21,4 @@ spec:
   selector:
     app: spark-master
   sessionAffinity: None
-  type: NodePort
+  type: ClusterIP
