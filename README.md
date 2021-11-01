@@ -53,7 +53,10 @@ docker push $DOCKER_USER_ID/driver
 1. Create a new project.
 2. Enable Kubernetes API for the project.
 3. Open Cloud Shell and ensure that the shell is tied to the correct project.
-4. Create a new cluster named  ```toolbox```
+   ```ruby
+   gcloud config set project $PROJECT_ID
+   ```
+5. Create a new cluster named  ```toolbox```
    Note: This might take some time. Wait for it complete before proceeding forward.
    ```ruby
    gcloud container clusters create toolbox --region=us-central1-c
