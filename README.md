@@ -205,4 +205,5 @@ docker push $DOCKER_USER_ID/driver
 3. Apache-Hadoop Worker: https://hub.docker.com/r/saurpath/hadoop-worker
 4. Sonar-Scanner: https://hub.docker.com/r/saurpath/sonar-scanner
 5. Apache-Spark: https://hub.docker.com/r/saurpath/spark
+6. Jupyter: https://hub.docker.com/r/jupyter/minimal-notebook
 ----------
