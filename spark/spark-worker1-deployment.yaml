@@ -13,8 +13,8 @@ spec:
         component: spark-worker1
     spec:
       containers:
-        - name: saurpath/spark
-          image: spark-hadoop:3.0.0
+        - name: spark-worker1
+          image: saurpath/spark
           command: ["/spark-worker"]
           ports:
             - containerPort: 8081

@@ -13,8 +13,8 @@ spec:
         component: spark-master
     spec:
       containers:
-        - name: saurpath/spark
-          image: spark-hadoop:3.0.0
+        - name: spark-master
+          image: saurpath/spark
           command: ["/spark-master"]
           ports:
             - containerPort: 7077
