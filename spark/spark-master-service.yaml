@@ -8,7 +8,6 @@ metadata:
   name: spark-master
   namespace: default
 spec:
-  externalTrafficPolicy: Cluster
   ports:
   - name: webui
     port: 8080
