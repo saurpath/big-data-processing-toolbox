@@ -123,9 +123,7 @@ docker push $DOCKER_USER_ID/driver
 2. Run the file in interactive mode.
    Note: The driver currently only acts as a landing page. Links to each micro-service will be updated soon.
   ```ruby
-    saurpath95@cloudshell:~ (test-330723)$ kubectl exec -it driver-6b89d77458-jv8mc /bin/bash
-    kubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.
-    root@driver-6b89d77458-jv8mc:/usr/src/project# python3 toolbox.py
+    saurpath95@cloudshell:~ (test-330723)$ kubectl exec -it driver-6b89d77458-jv8mc -- python3 toolbox.py
 
     Welcome to Big Data Processing Application
 
@@ -184,9 +182,7 @@ docker push $DOCKER_USER_ID/driver
 
     Type the number the here > 5
     Thank you for using Big Data Processing Application.
-    root@driver-6b89d77458-jv8mc:/usr/src/project# exit
-    exit  
-```
+  ```
 
 ## Sample Output from GKE!
 1. Cluster
