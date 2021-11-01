@@ -40,7 +40,7 @@ def main() -> None:
         print(OPTIONS)
         try:
             handle_input(int(input(PROMPT)))
-        except ValueError as e:
+        except Exception as e:
             print("Invalid Input. Please try again.")
 
 if __name__ == "__main__":
