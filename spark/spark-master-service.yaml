@@ -8,6 +8,7 @@ metadata:
   name: spark-master
   namespace: default
 spec:
+  externalTrafficPolicy: Cluster
   ports:
   - name: webui
     port: 8080
@@ -20,4 +21,4 @@ spec:
   selector:
     app: spark-master
   sessionAffinity: None
-  type: ClusterIP
+  type: NodePort
