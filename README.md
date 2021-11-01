@@ -123,65 +123,65 @@ docker push $DOCKER_USER_ID/driver
 2. Run the file in interactive mode.
    Note: The driver currently only acts as a landing page. Links to each micro-service will be updated soon.
   ```ruby
-  saurpath95@cloudshell:~/big-data-processing-toolbox (test-330723)$ kubectl attach driver-6b89d77458-jv8mc -it
+    saurpath95@cloudshell:~ (test-330723)$ kubectl exec -it driver-6b89d77458-jv8mc -- python3 toolbox.py
 
-  Welcome to Big Data Processing Application
-
-
-  Please type number that corresponds to which application you would like to run:
-  1. Apache Hadoop
-  2. Apache Spark
-  3. Jupyter Notebook
-  4. SonarQube and SonarScanner
-  5. Exit
+    Welcome to Big Data Processing Application
 
 
-  Type the number the here > 1
-  TODO: Link Apache Hadoop Here
-
-  Please type number that corresponds to which application you would like to run:
-  1. Apache Hadoop
-  2. Apache Spark
-  3. Jupyter Notebook
-  4. SonarQube and SonarScanner
-  5. Exit
+    Please type number that corresponds to which application you would like to run:
+    1. Apache Hadoop
+    2. Apache Spark
+    3. Jupyter Notebook
+    4. SonarQube and SonarScanner
+    5. Exit
 
 
-  Type the number the here > 2
-  TODO: Link Apache Spark Here
+    Type the number the here > 1
+    TODO: Link Apache Hadoop Here
 
-  Please type number that corresponds to which application you would like to run:
-  1. Apache Hadoop
-  2. Apache Spark
-  3. Jupyter Notebook
-  4. SonarQube and SonarScanner
-  5. Exit
-
-
-  Type the number the here > 3
-  TODO: Link Jupyter Notebook Here
-
-  Please type number that corresponds to which application you would like to run:
-  1. Apache Hadoop
-  2. Apache Spark
-  3. Jupyter Notebook
-  4. SonarQube and SonarScanner
-  5. Exit
+    Please type number that corresponds to which application you would like to run:
+    1. Apache Hadoop
+    2. Apache Spark
+    3. Jupyter Notebook
+    4. SonarQube and SonarScanner
+    5. Exit
 
 
-  Type the number the here > 4
-  TODO: Link Sonarqube Here
+    Type the number the here > 2
+    TODO: Link Apache Spark Here
 
-  Please type number that corresponds to which application you would like to run:
-  1. Apache Hadoop
-  2. Apache Spark
-  3. Jupyter Notebook
-  4. SonarQube and SonarScanner
-  5. Exit
+    Please type number that corresponds to which application you would like to run:
+    1. Apache Hadoop
+    2. Apache Spark
+    3. Jupyter Notebook
+    4. SonarQube and SonarScanner
+    5. Exit
 
 
-  Type the number the here > 5
-  Thank you for using Big Data Processing Application.
+    Type the number the here > 3
+    TODO: Link Jupyter Notebook Here
+
+    Please type number that corresponds to which application you would like to run:
+    1. Apache Hadoop
+    2. Apache Spark
+    3. Jupyter Notebook
+    4. SonarQube and SonarScanner
+    5. Exit
+
+
+    Type the number the here > 4
+    TODO: Link Sonarqube Here
+
+    Please type number that corresponds to which application you would like to run:
+    1. Apache Hadoop
+    2. Apache Spark
+    3. Jupyter Notebook
+    4. SonarQube and SonarScanner
+    5. Exit
+
+
+    Type the number the here > 5
+    Thank you for using Big Data Processing Application.
   ```
 
 ## Sample Output from GKE!
