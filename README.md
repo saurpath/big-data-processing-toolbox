@@ -171,19 +171,32 @@ docker push $DOCKER_USER_ID/driver
 
 ## Sample Output from GKE!
 1. Cluster
-![Application overview](/Images/cluster.png)
-3. Pods
-![Application overview](/Images/pods.png)
-5. Services and Load-Balancers
-![Application overview](/Images/services.png)
+
+![Cluster](/Images/cluster.png)
+
+2. Pods
+
+![Pods](/Images/pods.png)
+
+3. Services and Load-Balancers
+ 
+![Services and Load-Balancers](/Images/services.png)
+
 7. Apache-Hadoop
-![Application overview](/Images/apache-hadoop.png)
+
+![Apache-Hadoop](/Images/apache-hadoop.png)
+
 9. Jupyter
-![Application overview](/Images/jupyter.png)
+
+![Jupyter](/Images/jupyter.png)
+
 11. Apache-Spark
-![Application overview](/Images/spark.png)
+
+![Spark](/Images/spark.png)
+
 13. SonarQube
-![Application overview](/Images/sonarqube.png)
+
+![SonarQube](/Images/sonarqube.png)
 
 ----------
 ### Container Images on Docker Hub.
