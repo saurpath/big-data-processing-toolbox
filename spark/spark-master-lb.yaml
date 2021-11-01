@@ -3,22 +3,17 @@ kind: Service
 metadata:
   annotations:
     cloud.google.com/neg: '{"ingress":true}'
-  labels:
-    app: spark-master
-  name: spark-master
+  finalizers:
+  - service.kubernetes.io/load-balancer-cleanup
+  name: spark-master-lb
   namespace: default
 spec:
   externalTrafficPolicy: Cluster
   ports:
-  - name: webui
-    port: 8080
+  - port: 80
     protocol: TCP
     targetPort: 8080
-  - name: spark
-    port: 7077
-    protocol: TCP
-    targetPort: 7077
   selector:
-    app: spark-master
+    component: spark-master
   sessionAffinity: None
-  type: NodePort
+  type: LoadBalancer
