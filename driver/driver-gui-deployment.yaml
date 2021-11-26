@@ -4,8 +4,8 @@ metadata:
   annotations:
     deployment.kubernetes.io/revision: "2"
   labels:
-    app: driver
-  name: driver
+    app: driver-gui
+  name: driver-gui
   namespace: default
 spec:
   progressDeadlineSeconds: 600
@@ -13,7 +13,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: driver
+      app: driver-gui
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -23,10 +23,12 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: driver
+        app: driver-gui
     spec:
       containers:
-      - image: saurpath/driver
+      - image: saurpath/driver-gui
+        ports:
+          - containerPort: 8888
         imagePullPolicy: Always
         name: driver
         resources: {}

@@ -1,13 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=".")
 
 
 @app.route("/")
 def banner():
-    return "Welcome to Big Data Processing Application"
+    return render_template("index.html")
 
 
-# TODO: This is used later to host the GUI for the terminal
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=8888)
