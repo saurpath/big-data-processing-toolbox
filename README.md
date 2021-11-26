@@ -117,23 +117,23 @@ This is a microservice-based application that would allow the users to run Apach
   ```ruby
     saurpath95@cloudshell:~/big-data-processing-toolbox (test-330723)$ kubectl get pods
     NAME                                READY   STATUS    RESTARTS   AGE
-    datanode1-549b879ff6-f5mqr          1/1     Running   0          9m13s
-    datanode2-7f646fc575-zg26d          1/1     Running   0          9m12s
-    driver-6f9db4d7-hsbdc               1/1     Running   0          8m58s
-    driver-gui-58655868fd-9qx6j         1/1     Running   0          8m59s
-    jupyter-notebook-78987c94c7-wxqrd   1/1     Running   0          9m26s
-    namenode-7db54bb467-99m24           1/1     Running   0          9m24s
-    sonar-scanner-d6f477d89-jkrvf       1/1     Running   0          9m11s
-    spark-master-7f6569fbf5-pq68t       1/1     Running   0          9m10s
-    spark-worker1-5bb68bd769-gh549      1/1     Running   0          8m59s
-    spark-worker1-5bb68bd769-zx954      1/1     Running   0          8m59s
-    spark-worker2-b9bb944c-gmtmz        1/1     Running   0          8m58s
-    spark-worker2-b9bb944c-gzkmc        1/1     Running   0          8m58s
+    datanode1-549b879ff6-f5mqr          1/1     Running   0          22m
+    datanode2-7f646fc575-zg26d          1/1     Running   0          22m
+    driver-6f9db4d7-zp9nd               1/1     Running   0          22m
+    driver-gui-58655868fd-9qx6j         1/1     Running   0          22m
+    jupyter-notebook-78987c94c7-wxqrd   1/1     Running   0          22m
+    namenode-7db54bb467-99m24           1/1     Running   0          22m
+    sonar-scanner-d6f477d89-jkrvf       1/1     Running   0          22m
+    spark-master-7f6569fbf5-pq68t       1/1     Running   0          22m
+    spark-worker1-5bb68bd769-gh549      1/1     Running   0          22m
+    spark-worker1-5bb68bd769-zx954      1/1     Running   0          22m
+    spark-worker2-b9bb944c-gmtmz        1/1     Running   0          22m
+    spark-worker2-b9bb944c-gzkmc        1/1     Running   0          22m
   ```
 2. Run the file in interactive mode.
    Note: The driver currently only acts as a landing page. Links to each micro-service will be updated soon.
   ```ruby
-    saurpath95@cloudshell:~ (test-330723)$ kubectl exec -it driver-6b89d77458-jv8mc -- python3 toolbox.py
+    saurpath95@cloudshell:~/big-data-processing-toolbox (test-330723)$ kubectl exec -it driver-6f9db4d7-zp9nd -- python3 toolbox.py
 
     Welcome to Big Data Processing Application
 
@@ -147,7 +147,7 @@ This is a microservice-based application that would allow the users to run Apach
 
 
     Type the number the here > 1
-    TODO: Link Apache Hadoop Here
+    Navigate to: http://34.121.62.89
 
     Please type number that corresponds to which application you would like to run:
     1. Apache Hadoop
@@ -158,7 +158,7 @@ This is a microservice-based application that would allow the users to run Apach
 
 
     Type the number the here > 2
-    TODO: Link Apache Spark Here
+    Navigate to: http://34.135.128.145
 
     Please type number that corresponds to which application you would like to run:
     1. Apache Hadoop
@@ -169,7 +169,7 @@ This is a microservice-based application that would allow the users to run Apach
 
 
     Type the number the here > 3
-    TODO: Link Jupyter Notebook Here
+    Navigate to: http://34.134.205.190
 
     Please type number that corresponds to which application you would like to run:
     1. Apache Hadoop
@@ -180,7 +180,7 @@ This is a microservice-based application that would allow the users to run Apach
 
 
     Type the number the here > 4
-    TODO: Link Sonarqube Here
+    Navigate to: http://34.133.164.88
 
     Please type number that corresponds to which application you would like to run:
     1. Apache Hadoop
@@ -226,9 +226,10 @@ This is a microservice-based application that would allow the users to run Apach
 ----------
 ### Container Images on Docker Hub.
 1. Driver: https://hub.docker.com/r/saurpath/driver
-2. Apache-Hadoop Master: https://hub.docker.com/r/saurpath/hadoop-master
-3. Apache-Hadoop Worker: https://hub.docker.com/r/saurpath/hadoop-worker
-4. Sonar-Scanner: https://hub.docker.com/r/saurpath/sonar-scanner
-5. Apache-Spark: https://hub.docker.com/r/saurpath/spark
-6. Jupyter: https://hub.docker.com/r/jupyter/minimal-notebook
+2. [Extra Credit] Driver GUI: https://hub.docker.com/r/saurpath/driver-gui
+3. Apache-Hadoop Master: https://hub.docker.com/r/saurpath/hadoop-master
+4. Apache-Hadoop Worker: https://hub.docker.com/r/saurpath/hadoop-worker
+5. Sonar-Scanner: https://hub.docker.com/r/saurpath/sonar-scanner
+6. Apache-Spark: https://hub.docker.com/r/saurpath/spark
+7. Jupyter: https://hub.docker.com/r/jupyter/minimal-notebook
 ----------
