@@ -101,6 +101,8 @@ docker push $DOCKER_USER_ID/driver
     service/spark-master-lb created
     deployment.apps/spark-worker1 created
     deployment.apps/spark-worker2 created
+    deployment.apps/driver created
+    service/driver-lb created
    ```
 
 ### 4. Interact using the driver application.
