@@ -33,22 +33,28 @@ This is a microservice-based application that would allow the users to run Apach
 3. SonarScanner
     ```ruby
     cd sonarscanner/
-    docker build -f Dockerfile -t $DOCKER_USER_ID/sonar-scanner.
+    docker build -f Dockerfile -t $DOCKER_USER_ID/sonar-scanner .
     docker push $DOCKER_USER_ID/sonar-scanner
     ```
 3. Apache-Spark
     ```ruby
     cd spark/
-    docker build -f Dockerfile -t $DOCKER_USER_ID/spark.
+    docker build -f Dockerfile -t $DOCKER_USER_ID/spark .
     docker push $DOCKER_USER_ID/spark
     ```
 4. Driver
-```ruby
-cd driver/
-docker build -f Dockerfile -t $DOCKER_USER_ID/driver.
-docker push $DOCKER_USER_ID/driver
-```
-
+    ```ruby
+    cd driver/terminal
+    docker build -f Dockerfile -t $DOCKER_USER_ID/driver .
+    docker push $DOCKER_USER_ID/driver
+    ```
+4. Driver GUI [Extra Credit]
+    ```ruby
+    cd driver/
+    docker build -f Dockerfile -t $DOCKER_USER_ID/driver-gui .
+    docker push $DOCKER_USER_ID/driver-gui
+    ```
+    
 ### 2. Setup Google Cloud Environment.
 1. Create a new project.
 2. Enable Kubernetes API for the project.
@@ -102,6 +108,7 @@ docker push $DOCKER_USER_ID/driver
     deployment.apps/spark-worker1 created
     deployment.apps/spark-worker2 created
     deployment.apps/driver created
+    deployment.apps/driver-gui created
     service/driver-lb created
    ```
 
@@ -110,17 +117,18 @@ docker push $DOCKER_USER_ID/driver
   ```ruby
     saurpath95@cloudshell:~/big-data-processing-toolbox (test-330723)$ kubectl get pods
     NAME                                READY   STATUS    RESTARTS   AGE
-    datanode1-549b879ff6-h5ddv          1/1     Running   0          85m
-    datanode2-7f646fc575-hxgcr          1/1     Running   0          85m
-    driver-6b89d77458-jv8mc             1/1     Running   0          13s
-    jupyter-notebook-78987c94c7-zgxfp   1/1     Running   0          85m
-    namenode-7db54bb467-66dn9           1/1     Running   0          85m
-    sonar-scanner-d6f477d89-7svqs       1/1     Running   0          85m
-    spark-master-7f6569fbf5-psnzf       1/1     Running   0          85m
-    spark-worker1-5bb68bd769-nb7dv      1/1     Running   7          85m
-    spark-worker1-5bb68bd769-nhvw2      1/1     Running   8          85m
-    spark-worker2-b9bb944c-4cwlw        1/1     Running   7          85m
-    spark-worker2-b9bb944c-w2ntx        1/1     Running   7          85m
+    datanode1-549b879ff6-f5mqr          1/1     Running   0          9m13s
+    datanode2-7f646fc575-zg26d          1/1     Running   0          9m12s
+    driver-6f9db4d7-hsbdc               1/1     Running   0          8m58s
+    driver-gui-58655868fd-9qx6j         1/1     Running   0          8m59s
+    jupyter-notebook-78987c94c7-wxqrd   1/1     Running   0          9m26s
+    namenode-7db54bb467-99m24           1/1     Running   0          9m24s
+    sonar-scanner-d6f477d89-jkrvf       1/1     Running   0          9m11s
+    spark-master-7f6569fbf5-pq68t       1/1     Running   0          9m10s
+    spark-worker1-5bb68bd769-gh549      1/1     Running   0          8m59s
+    spark-worker1-5bb68bd769-zx954      1/1     Running   0          8m59s
+    spark-worker2-b9bb944c-gmtmz        1/1     Running   0          8m58s
+    spark-worker2-b9bb944c-gzkmc        1/1     Running   0          8m58s
   ```
 2. Run the file in interactive mode.
    Note: The driver currently only acts as a landing page. Links to each micro-service will be updated soon.
