@@ -33,22 +33,28 @@ This is a microservice-based application that would allow the users to run Apach
 3. SonarScanner
     ```ruby
     cd sonarscanner/
-    docker build -f Dockerfile -t $DOCKER_USER_ID/sonar-scanner.
+    docker build -f Dockerfile -t $DOCKER_USER_ID/sonar-scanner .
     docker push $DOCKER_USER_ID/sonar-scanner
     ```
 3. Apache-Spark
     ```ruby
     cd spark/
-    docker build -f Dockerfile -t $DOCKER_USER_ID/spark.
+    docker build -f Dockerfile -t $DOCKER_USER_ID/spark .
     docker push $DOCKER_USER_ID/spark
     ```
 4. Driver
-```ruby
-cd driver/
-docker build -f Dockerfile -t $DOCKER_USER_ID/driver.
-docker push $DOCKER_USER_ID/driver
-```
-
+    ```ruby
+    cd driver/terminal
+    docker build -f Dockerfile -t $DOCKER_USER_ID/driver .
+    docker push $DOCKER_USER_ID/driver
+    ```
+4. Driver GUI [Extra Credit]
+    ```ruby
+    cd driver
+    docker build -f Dockerfile -t $DOCKER_USER_ID/driver-gui .
+    docker push $DOCKER_USER_ID/driver-gui
+    ```
+    
 ### 2. Setup Google Cloud Environment.
 1. Create a new project.
 2. Enable Kubernetes API for the project.
