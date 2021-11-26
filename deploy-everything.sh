@@ -34,5 +34,6 @@ kubectl apply -f spark/spark-worker2-deployment.yaml
 
 #Driver
 kubectl apply -f driver/driver-deployment.yaml
+kubectl apply -f driver/driver-gui-deployment.yaml
 kubectl apply -f driver/driver-lb.yaml
 
