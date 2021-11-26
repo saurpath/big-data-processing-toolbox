@@ -20,13 +20,13 @@ Type the number the here > """
 def handle_input(choice: int) -> None:
     match choice:
         case 1:
-            print("TODO: Link Apache Hadoop Here")
+            print("Navigate to: http://34.121.62.89")
         case 2:
-            print("TODO: Link Apache Spark Here")
+            print("Navigate to: http://34.135.128.145")
         case 3:
-            print("TODO: Link Jupyter Notebook Here")
+            print("Navigate to: http://34.134.205.190")
         case 4:
-            print("TODO: Link Sonarqube Here")
+            print("Navigate to: http://34.133.164.88")
         case 5:
             print("Thank you for using Big Data Processing Application.")
             os._exit(0)
