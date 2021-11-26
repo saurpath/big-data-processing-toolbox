@@ -50,7 +50,7 @@ This is a microservice-based application that would allow the users to run Apach
     ```
 4. Driver GUI [Extra Credit]
     ```ruby
-    cd driver
+    cd driver/
     docker build -f Dockerfile -t $DOCKER_USER_ID/driver-gui .
     docker push $DOCKER_USER_ID/driver-gui
     ```
