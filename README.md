@@ -111,8 +111,29 @@ This is a microservice-based application that would allow the users to run Apach
     deployment.apps/driver-gui created
     service/driver-lb created
    ```
-
-### 4. Interact using the driver application.
+ 
+### 4. Amend the new IP addresses in the driver app.
+1. Get the IP address from the service tab and replace the respective IP address in the ```toolbox.py``` and ```index.html```.
+2. For ```toolbox.py```, the IP addresses are located under the function handle_input.
+3. For ```index.html```, the IP addresses are located in respective divs for each service.
+4. Rebuild the docker containers and push them to docker hub.
+   ```ruby
+   cd driver/terminal
+   docker build -f Dockerfile -t $DOCKER_USER_ID/driver .
+   docker push $DOCKER_USER_ID/driver
+   cd ..
+   docker build -f Dockerfile -t $DOCKER_USER_ID/driver-gui .
+   docker push $DOCKER_USER_ID/driver-gui
+   ```
+4. Delete and re-deply driver and driver-gui pods.
+    ```ruby
+    kubectl delete -f driver/terminal/driver-deployment.yaml
+    kubectl delete -f driver/driver-gui-deployment.yaml
+    kubectl apply -f driver/terminal/driver-deployment.yaml
+    kubectl apply -f driver/driver-gui-deployment.yaml
+    ```
+    
+### 5. Interact using the driver application.
 1. Get the pod ID for the driver.
   ```ruby
     saurpath95@cloudshell:~/big-data-processing-toolbox (test-330723)$ kubectl get pods
